@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">EmotiBit</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="prompt">Select a graph</string>
+    <string-array name="graph_array">
+        <item>ACC</item>
+        <item>GYRO</item>
+        <item>MAGN</item>
+        <item>EDA</item>
+        <item>HUM</item>
+        <item>PPGGRN</item>
+        <item>PPGIR</item>
+        <item>PPGR</item>
+        <item>TEMP</item>
+        <item>THERM</item>
+    </string-array>
+    <string name="subnet_wifiAp">192.168.43.</string>
+    <string name="port_number">30000</string>
+    <string name="max_devices">2</string>
+</resources>
