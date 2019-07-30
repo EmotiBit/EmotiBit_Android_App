@@ -29,14 +29,14 @@ public class ExtractionDatas  {
 
                 int endLineIndex = temp.indexOf("\n");
 
-                if (endLineIndex != -1) {
+                if (endLineIndex != -1 && endLineIndex != 0) {//second 'if' condition added by nitin:07/30
                     String line = temp.substring(0, endLineIndex);
 
                     temp = temp.substring(endLineIndex + 1);
 
                     dataLine = line.split(",");
 
-                   String dataType = dataLine[3];
+                    String dataType = dataLine[3];
 
                     values = new Object[dataLine.length - HEADER_SIZE];
 
