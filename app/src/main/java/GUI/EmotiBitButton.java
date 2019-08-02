@@ -45,7 +45,7 @@ public class EmotiBitButton {
         if(!mMapButton.containsKey(inetAddress)) {
 
             Button button = new Button(mActivity);
-            button.setText("EmotiBit " + (mIndex + 1));
+            // **1 was defined here -nitin
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -60,6 +60,8 @@ public class EmotiBitButton {
                     mActivity.startActivity(intent);
                 }
             });
+//            button.setText("EmotiBit " + (mIndex + 1));//**1
+            button.setText("EmotiBit " + (inetAddress));
 
             button.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.logo_wake_72, 0);
 
