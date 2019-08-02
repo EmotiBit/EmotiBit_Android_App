@@ -98,10 +98,11 @@ public class EmotiBitActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotibit);
         Intent intent = getIntent();
-        String title = intent.getStringExtra("selected");
+//        String title = intent.getStringExtra("selected");
         int port = Integer.valueOf(getString(R.string.port_number));
         InetAddress address = (InetAddress) intent.getSerializableExtra("address");
-        getSupportActionBar().setTitle(title);
+
+//        getSupportActionBar().setTitle(title);
         mContext = getApplicationContext();
         mTextViewGPS = (TextView) findViewById(R.id.text_gps);
      //   mTextViewIP = (TextView) findViewById(R.id.text_ip);

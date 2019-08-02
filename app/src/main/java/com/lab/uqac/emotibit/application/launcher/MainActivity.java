@@ -1,7 +1,11 @@
 package com.lab.uqac.emotibit.application.launcher;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -50,6 +54,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // checking for wifi connection
+//        Context context = this;
+//        ConnectivityManager cm =
+//                (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
+//
+//        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+//        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+//
+//        boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
+//
+//        if(!(isConnected && isWiFi)){
+//            Toast.makeText(this, "WiFi not connected.Please connect to Wifi or enable HotSpot", Toast.LENGTH_LONG).show();
+//
+//        }
+//        while(!(isConnected && isWiFi)){
+//            super.onResume();
+//            Toast.makeText(this, "Connect to WiFi", Toast.LENGTH_LONG).show();
+//
+//        }
+        // end modifications
 
         mButtonExit = (Button) findViewById(R.id.button_exit);
         mVerticalLayout = (LinearLayout) findViewById(R.id.row_main);

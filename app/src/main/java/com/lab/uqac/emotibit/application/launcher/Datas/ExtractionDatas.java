@@ -29,7 +29,11 @@ public class ExtractionDatas  {
 
                 int endLineIndex = temp.indexOf("\n");
 
-                if (endLineIndex != -1 && endLineIndex != 0) {//second 'if' condition added by nitin:07/30
+                if(endLineIndex == 0){ // modified by nitin
+                    temp = temp.substring(endLineIndex + 1);
+                }
+
+                else if (endLineIndex != -1 ) {
                     String line = temp.substring(0, endLineIndex);
 
                     temp = temp.substring(endLineIndex + 1);
