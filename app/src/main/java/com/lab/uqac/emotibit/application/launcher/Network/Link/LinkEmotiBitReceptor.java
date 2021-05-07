@@ -80,11 +80,16 @@ public class LinkEmotiBitReceptor extends AsyncTask<Void, InetAddress, Void> {
                     mIndex++;
                 }
 
-                if (isCancelled()) {
-                    mHandler.removeCallbacks(emotibitEmettor);
-                    stopConnection();
-                    break;
-                }
+
+
+                // for some reason this isCancelled always returns true in my testing so I commented this out here
+                // so that discovery could happen, this needs to be fixed obviously
+
+                //                if (isCancelled()) {
+//                    mHandler.removeCallbacks(emotibitEmettor);
+//                    stopConnection();
+//                    break;
+//                }
 
                 mHandler.postDelayed(emotibitEmettor, 10000);
 
